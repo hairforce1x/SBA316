@@ -31,12 +31,13 @@ function cardClick(e) {
 
 // Step 4 check for condition (all cards flipped) that game is over
 const checkCards = document.querySelectorAll('div.cards.clicked')
-checkCards.forEach(function(node, index){
+checkCards.forEach(function(node, index){ // Iterate over a collection of elements to accomplise some task
     console.log(index, node.textContent)
 })
 console.log(checkCards)
 
-// Step 5 Add simple form with validation
-const form = document.querySelector('button');
-form.addEventListener('submit', function (event) {
-    const emailValue = emailInput.value;
+// Step 5 Add button to email form and validation
+const form = document.getElementById('email-form');
+const button = document.createElement('button');
+button.textContent = 'Submit:';
+form.appendChild(button)  // Use appendChild and/or prepend to add new elements to the DOM.
