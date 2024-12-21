@@ -41,7 +41,7 @@ const button = document.createElement('button');
 button.textContent = 'Submit:';
 form.appendChild(button)  // Use appendChild and/or prepend to add new elements to the DOM.
 
-form.addEventListener('submit', function(){ // Validation code unsuccessful
+form.addEventListener('submit', function(){ // Validation code unsuccessful && Second event listener type
     const emailInput = document.getElementById('email');
     const emailValue = emailInput.value;
     const regex = '/^[^\s@]+@[^\s@]+\.[^\s@]+$/'
