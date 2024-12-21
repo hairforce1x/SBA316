@@ -16,6 +16,7 @@ function cardClick(e) {
     const clickedCard = e.target;
     clickedCard.classList.add('clicked');
     clickedCard.textContent = 'clicked'; // Modify the HTML or text content of at least one element in response to user interaction using innerHTML, innerText, or textContent.
+    clickedCard.style.backgroundColor = 'green'; // Modify the style and/or CSS classes of an element in response to user interactions using the style or classList properties. && Modify at least one attribute of an element in response to user interaction.
     console.log('clicked:', clickedCard);
 }
 
