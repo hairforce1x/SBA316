@@ -10,7 +10,7 @@ const allCards = document.querySelectorAll('.cards') // Cache at least one eleme
 allCards.forEach(card => {
     card.addEventListener('click', cardClick); // 
 })
-let cardArr = [];
+let cardArr = []; 
 function cardClick(e) {
     const clickedCard = e.target;
     clickedCard.classList.add('clicked');
@@ -34,10 +34,22 @@ const checkCards = document.querySelectorAll('div.cards.clicked')
 checkCards.forEach(function(node, index){ // Iterate over a collection of elements to accomplise some task
     console.log(index, node.textContent)
 })
-console.log(checkCards)
 
 // Step 5 Add button to email form and validation
 const form = document.getElementById('email-form');
 const button = document.createElement('button');
 button.textContent = 'Submit:';
 form.appendChild(button)  // Use appendChild and/or prepend to add new elements to the DOM.
+
+form.addEventListener('submit', function(){ // Validation code unsuccessful
+    const emailInput = document.getElementById('email');
+    const emailValue = emailInput.value;
+    const regex = '/^[^\s@]+@[^\s@]+\.[^\s@]+$/'
+    console.log(emailValue) // Logs for a moment then disappears
+    if (regex !== emailValue) {
+        e.preventDefault(); 
+        console.log("fail")
+    } else if (regex === emailValue) {
+        console.log("succeed")
+    }
+})
